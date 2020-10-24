@@ -1,0 +1,75 @@
+/* in h1 div etc, soprattutto in browser diversi, i valori di default come display
+oppure margin e padding, gli vengono dati valori di default diversi, allora la cosa 
+intelligente e' quella di settare dei valori di default a prescindere */
+
+* {
+    padding: 0em;
+    margin: 0em;
+}
+html {
+    background-image: url('./images/sfondo.jpg'); /* deve  essere  leggera come img */
+    background-color: black;
+    display: block; /* questo perche' l'immagine non e' un elemento di blocco, altrimenti poi il margin auto non  funziona */
+    margin: auto;
+}
+
+body {
+    max-width: 1024px; /* piu' di cosi non ha nemmeno senso, per svariati motivi, ad esempio se
+    uno usa uno schermo grande lo fa per vedere piu di una pagina, quindi se glielo espandiamo al massimo non e' carino. */
+    margin: auto; /* il browser posiziona al centro nel caso in cui la width fosse piu' di 1024, 
+    perche' da gli stessi valori a tutti i margini del contorno dell'elemento */
+    background-color: #fff;
+    font-family: "Comics San MS", cursive, sans-serif;
+    border: 1px
+}
+#header {
+    padding: 1.0em;
+    text-align: center;
+    overflow: auto;
+}
+#logo {
+    float: left; /* tutto quello che viene dopo gli scorre affianco, non solo la roba all'interno dello stesso "div" */
+    width: 15%;
+    max-width: 9em;
+
+}
+#header h1 {
+    color: #BD091B;
+    font-size: 1.5em;
+}
+
+#breadcram {
+    background-color: #BD091B;
+    background-color: white;
+    padding: 0.5em 0 0.5em 1.0em; /* in ordine top rigth bottom left*/
+    border-top: 1px solid #ddd;
+}
+
+#menu {
+    float: left;
+    width: 20%;
+    padding: 0.8em;
+    font-size: 1.1em;
+}
+#menu ul {
+    list-style-type: none;
+}
+
+#menu ul li {
+    padding-top: 0.5em;
+    padding-top: 0.5em;
+}
+
+#rightSidebar {
+    float: right;
+    width: 20%;
+    font-size: 0.7;
+    padding: 0.5em;
+}
+#contentHomePage {
+    width: 50%; /* perche' non sto li a calcolare i vari padding e margin, faccio ad occhio*/
+    margin-left: 20%;
+    border-left: 1px solid #ddd;
+    border-right: 1px slid #ddd;
+
+}
